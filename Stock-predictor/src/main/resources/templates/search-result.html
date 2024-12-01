@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Stock Prediction Result</title>
+</head>
+<body>
+<h2>Stock Prediction Result</h2>
+<div th:if="${error}">
+  <p th:text="${error}"></p>
+</div>
+<div th:if="${!error}">
+  <p>Symbol: <span th:text="${symbol}"></span></p>
+  <p>Predicted Price: <span th:text="${predictedPrice}"></span></p>
+  <p>Confidence: <span th:text="${confidence}"></span></p>
+</div>
+<a href="/search">Go Back</a> <!-- Link to go back to the search page -->
+</body>
+</html>

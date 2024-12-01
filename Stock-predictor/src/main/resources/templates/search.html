@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Search</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<h2>Search Stock Prediction</h2>
+<form th:action="@{/search/prediction}" method="get">
+  <label for="stock">Stock Symbol:</label>
+  <input type="text" id="stock" name="symbol" required />
+  <button type="submit">Get Prediction</button>
+</form>
+
+</body>
+</html>
